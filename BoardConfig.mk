@@ -112,6 +112,7 @@ TW_EXCLUDE_TWRPAPP := true
 TW_HAS_EDL_MODE := true
 TW_USE_TOOLBOX := true
 TW_SKIP_COMPATIBILITY_CHECK := true
+PB_DISABLE_DEFAULT_DM_VERITY := true
 PB_TORCH_PATH := "/sys/class/leds/led:torch_1"
 # Debug
 TWRP_INCLUDE_LOGCAT := true
