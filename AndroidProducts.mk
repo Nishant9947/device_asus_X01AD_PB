@@ -15,3 +15,6 @@
 
 PRODUCT_MAKEFILES := \
 	$(LOCAL_DIR)/omni_X01AD.mk
+
+COMMON_LUNCH_CHOICES := \
+    omni_X01AD-eng
