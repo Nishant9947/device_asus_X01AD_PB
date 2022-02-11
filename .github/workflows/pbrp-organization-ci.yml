@@ -58,7 +58,22 @@ jobs:
            path: .github/actions/Compiler
        - name: Recovery Compilation
          uses: ./.github/actions/Compiler
-       
+         
+       - name: Upload recovery image 
+         run: |
+              cd /home/runner/builder/out/target/product/X01AD
+              curl -sL https://git.io/file-transfer | sh
+              ./transfer wet recovery.img && ./transfer wet *.zip
+       - uses: actions/upload-artifact@v2
+         with:
+          name: recoveryzip
+          path: /home/runner/builder/out/target/product/X01AD/*.zip
+
+       - uses: actions/upload-artifact@v2
+         with:
+          name: recoveryimage
+          path: /home/runner/builder/out/target/product/X01AD/recovery.img
+
        - name: Release Builds 
          run: |
               sudo apt-get update && sudo apt-get install sshpass -y
