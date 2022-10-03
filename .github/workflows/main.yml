@@ -10,19 +10,19 @@ on:
       LIBRARY_URL:
         description: 'LIBRARY_URL'
         required: true
-        default: 'https://github.com/SHRP/manifest'
+        default: 'https://github.com/PitchBlackRecoveryProject/manifest_pb'
       LIBRARY_BRANCH:
         description: 'LIBRARY_BRANCH'
         required: true
-        default: 'v3_9.0'
+        default: 'android-12.1'
       DEVICE_URL:
         description: 'DEVICE_URL'
         required: true
-        default:  'https://github.com/yash1375/device_asus_x01ad'
+        default:  'https://github.com/Nishant9947/device_asus_X01AD_PB'
       DEVICE_BRANCH:
         description: 'DEVICE_BRANCH'
         required: true
-        default: 'android-9.0'
+        default: 'A-12.1'
       DEVICE_PATH:
         description: 'DEVICE_PATH'
         required: true
@@ -74,8 +74,8 @@ jobs:
         mkdir workspace
         cd workspace
         echo "::set-output name=pwd::$(pwd)"
-        git config --global user.name "yash1375"
-        git config --global user.email "yash98123@gmail.com"
+        git config --global user.name "Nishant9947"
+        git config --global user.email "nishantprajapati75@gmail.com"
         repo init --depth=1 -u ${{ github.event.inputs.LIBRARY_URL }} -b ${{ github.event.inputs.LIBRARY_BRANCH }}
       id: pwd
           
