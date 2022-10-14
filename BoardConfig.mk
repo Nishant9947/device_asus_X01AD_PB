@@ -87,6 +87,15 @@ TARGET_USERIMAGES_USE_F2FS := true
 # Qualcomm support
 BOARD_USES_QCOM_HARDWARE := true
 
+# Qcom common decryption
+PRODUCT_PACKAGES += 
+   qcom_decrypt\
+    qcom_decrypt_fbe
+
+# Crypto
+TW_INCLUDE_CRYPTO := true
+BOARD_USES_QCOM_FBE_DECRYPTION := true
+
 # TWRP Configuration
 TW_SCREEN_BLANK_ON_BOOT := true
 TW_EXTRA_LANGUAGES := true
@@ -120,6 +129,7 @@ TW_INCLUDE_FUSE_EXFAT := true
 
 # Hack: prevent anti rollback
 PLATFORM_SECURITY_PATCH := 2029-10-01
+PLATFORM_VERSION := 16.1.0
 
 # NTFS Support
 TW_INCLUDE_FUSE_NTFS := true
