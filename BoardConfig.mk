@@ -87,11 +87,6 @@ TARGET_USERIMAGES_USE_F2FS := true
 # Qualcomm support
 BOARD_USES_QCOM_HARDWARE := true
 
-# Qcom common decryption
-PRODUCT_PACKAGES += 
-   qcom_decrypt\
-    qcom_decrypt_fbe
-
 # Crypto
 TW_INCLUDE_CRYPTO := true
 BOARD_USES_QCOM_FBE_DECRYPTION := true
