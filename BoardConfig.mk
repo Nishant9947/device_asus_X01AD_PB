@@ -86,11 +86,10 @@ TARGET_USERIMAGES_USE_F2FS := true
 
 # Qualcomm support
 BOARD_USES_QCOM_HARDWARE := true
-TW_INCLUDE_CRYPTO := true
 TW_INCLUDE_CRYPTO_FBE := true
 
 # Crypto
-TW_INCLUDE_CRYPTO := true
+TW_INCLUDE_CRYPTO_FBE := true
 BOARD_USES_QCOM_FBE_DECRYPTION := true
 
 # TWRP Configuration
