@@ -61,10 +61,6 @@ BOARD_MKBOOTIMG_ARGS := --ramdisk_offset $(BOARD_RAMDISK_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --tags_offset $(BOARD_KERNEL_TAGS_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOTIMG_HEADER_VERSION)
 
-# Encryption
-TW_INCLUDE_CRYPTO := true
-TW_INCLUDE_CRYPTO_FBE := true
-
 # Keymaster
 TARGET_PROVIDES_KEYMASTER := true
 
@@ -95,7 +91,6 @@ BOARD_USES_QCOM_HARDWARE := true
 TW_SCREEN_BLANK_ON_BOOT := true
 TW_EXTRA_LANGUAGES := true
 TW_THEME := portrait_hdpi
-TW_INCLUDE_CRYPTO := true
 TW_MAX_BRIGHTNESS := 255
 TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
 TW_SCREEN_BLANK_ON_BOOT := true
@@ -131,5 +126,3 @@ TW_INCLUDE_FUSE_NTFS := true
 
 #Ignore Missing Dependencies
 ALLOW_MISSING_DEPENDENCIES=true
-# Platform version
-PLATFORM_VERSION := 16.1.0
